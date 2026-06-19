@@ -1,0 +1,203 @@
+Rosmaster Serial Opened! Baudrate=115200
+----------------create receive threading--------------
+[INFO] Initial yaw: -5.09
+[INFO] Battery voltage: 10.6
+[INFO] Moving forward 0.50 m at speed 12
+[INFO] Encoder sync enabled for all 4 wheels.
+[INFO] Stop condition uses slowest wheel distance.
+[DEBUG] progress=0.000 avg=0.000 yaw_err=0.00
+[DEBUG] wheel_dist=[0.000, 0.000, 0.000, 0.000]
+[DEBUG] wheel_err=[0.000, 0.000, 0.000, 0.000]
+[DEBUG] motor_cmd=[11.9, 11.9, 27.1, 11.9]
+[DEBUG] progress=0.000 avg=0.002 yaw_err=0.15
+[DEBUG] wheel_dist=[0.000, 0.002, 0.005, 0.002]
+[DEBUG] wheel_err=[0.002, 0.000, -0.002, -0.000]
+[DEBUG] motor_cmd=[13.2, 12.6, 24.2, 11.3]
+[DEBUG] progress=0.006 avg=0.009 yaw_err=0.38
+[DEBUG] wheel_dist=[0.006, 0.008, 0.012, 0.009]
+[DEBUG] wheel_err=[0.003, 0.001, -0.004, -0.000]
+[DEBUG] motor_cmd=[14.3, 13.7, 21.2, 10.3]
+[DEBUG] progress=0.016 avg=0.020 yaw_err=0.46
+[DEBUG] wheel_dist=[0.016, 0.019, 0.025, 0.021]
+[DEBUG] wheel_err=[0.004, 0.001, -0.004, -0.000]
+[DEBUG] motor_cmd=[14.9, 14.0, 19.8, 9.9]
+[DEBUG] progress=0.029 avg=0.033 yaw_err=0.48
+[DEBUG] wheel_dist=[0.029, 0.032, 0.038, 0.033]
+[DEBUG] wheel_err=[0.004, 0.001, -0.004, -0.000]
+[DEBUG] motor_cmd=[15.0, 14.1, 19.6, 9.9]
+[DEBUG] progress=0.041 avg=0.045 yaw_err=0.40
+[DEBUG] wheel_dist=[0.041, 0.044, 0.049, 0.045]
+[DEBUG] wheel_err=[0.004, 0.001, -0.004, -0.000]
+[DEBUG] motor_cmd=[14.6, 13.8, 20.4, 10.3]
+[DEBUG] progress=0.054 avg=0.058 yaw_err=0.41
+[DEBUG] wheel_dist=[0.054, 0.058, 0.063, 0.058]
+[DEBUG] wheel_err=[0.004, 0.001, -0.005, -0.000]
+[DEBUG] motor_cmd=[14.8, 13.8, 20.0, 10.3]
+[DEBUG] progress=0.068 avg=0.072 yaw_err=0.48
+[DEBUG] wheel_dist=[0.068, 0.071, 0.077, 0.072]
+[DEBUG] wheel_err=[0.004, 0.001, -0.005, -0.000]
+[DEBUG] motor_cmd=[15.1, 14.1, 19.2, 10.0]
+[DEBUG] progress=0.080 avg=0.084 yaw_err=0.41
+[DEBUG] wheel_dist=[0.080, 0.083, 0.089, 0.084]
+[DEBUG] wheel_err=[0.004, 0.001, -0.005, -0.000]
+[DEBUG] motor_cmd=[15.0, 13.7, 19.8, 10.2]
+[DEBUG] progress=0.095 avg=0.099 yaw_err=0.44
+[DEBUG] wheel_dist=[0.095, 0.098, 0.104, 0.099]
+[DEBUG] wheel_err=[0.004, 0.001, -0.005, 0.000]
+[DEBUG] motor_cmd=[15.1, 13.9, 19.3, 10.2]
+[DEBUG] progress=0.108 avg=0.112 yaw_err=0.50
+[DEBUG] wheel_dist=[0.108, 0.111, 0.118, 0.112]
+[DEBUG] wheel_err=[0.004, 0.001, -0.006, 0.000]
+[DEBUG] motor_cmd=[15.4, 14.2, 18.2, 10.0]
+[DEBUG] progress=0.124 avg=0.129 yaw_err=0.57
+[DEBUG] wheel_dist=[0.124, 0.128, 0.135, 0.130]
+[DEBUG] wheel_err=[0.005, 0.001, -0.006, -0.000]
+[DEBUG] motor_cmd=[15.9, 14.6, 17.3, 9.5]
+[DEBUG] progress=0.141 avg=0.146 yaw_err=0.78
+[DEBUG] wheel_dist=[0.141, 0.144, 0.154, 0.147]
+[DEBUG] wheel_err=[0.006, 0.003, -0.007, -0.001]
+[DEBUG] motor_cmd=[16.9, 15.9, 14.3, 8.5]
+[DEBUG] progress=0.161 avg=0.166 yaw_err=0.70
+[DEBUG] wheel_dist=[0.161, 0.164, 0.172, 0.168]
+[DEBUG] wheel_err=[0.005, 0.002, -0.006, -0.002]
+[DEBUG] motor_cmd=[16.6, 15.5, 15.9, 8.6]
+[DEBUG] progress=0.175 avg=0.178 yaw_err=0.48
+[DEBUG] wheel_dist=[0.175, 0.177, 0.182, 0.179]
+[DEBUG] wheel_err=[0.003, 0.002, -0.004, -0.001]
+[DEBUG] motor_cmd=[15.1, 14.4, 19.2, 9.7]
+[DEBUG] progress=0.186 avg=0.187 yaw_err=-0.26
+[DEBUG] wheel_dist=[0.187, 0.187, 0.187, 0.186]
+[DEBUG] wheel_err=[-0.000, -0.000, 0.000, 0.001]
+[DEBUG] motor_cmd=[11.1, 10.9, 28.7, 13.1]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.1, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.1, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.2, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.1, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.1, 11.2, 28.0, 13.0]
+[DEBUG] progress=0.188 avg=0.188 yaw_err=-0.24
+[DEBUG] wheel_dist=[0.189, 0.188, 0.189, 0.188]
+[DEBUG] wheel_err=[-0.000, 0.000, -0.000, 0.000]
+[DEBUG] motor_cmd=[11.1, 11.2, 28.0, 13.0]
+[WARN] Forward timeout reached.
+[INFO] Stopped at progress 0.188 m
+[INFO] Average wheel distance: 0.188 m
+[INFO] Max wheel sync error: 0.008 m
