@@ -40,7 +40,7 @@ def main():
     driver = RobotDriver(dry_run=not args.run, debug=args.debug)
 
     if args.forward is not None:
-        driver. (args.forward, speed=args.speed)
+        driver.go_forward(args.forward, speed=args.speed)
         return
 
     if args.turn is not None:

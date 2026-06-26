@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-06-25T17:21:05",
+  "camera_id": 0,
+  "color": "yellow",
+  "frame_size": {
+    "width": 640,
+    "height": 480
+  },
+  "roi": [
+    0.0,
+    0.0,
+    1.0,
+    0.8
+  ],
+  "object_bbox_px": {
+    "x": 247,
+    "y": 209,
+    "width": 155,
+    "height": 127,
+    "center_x": 324,
+    "center_y": 272,
+    "area": 17255.0
+  },
+  "gripper_box": [
+    0.3625,
+    0.410417,
+    0.289062,
+    0.314583
+  ],
+  "ready_min_area": 13804.0,
+  "ready_min_height": 101,
+  "center_tolerance_ratio": 0.08,
+  "source": "pick1_manual.jpg ideal pick_1 image",
+  "raw_image": "/home/pi/chay/pick1_manual.jpg",
+  "debug_image": "/home/pi/chay/pick1_manual_bbox.jpg"
+}

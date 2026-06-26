@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-06-25T17:27:04",
+  "camera_id": 0,
+  "color": "red",
+  "frame_size": {
+    "width": 640,
+    "height": 480
+  },
+  "roi": [
+    0.0,
+    0.0,
+    1.0,
+    0.8
+  ],
+  "object_bbox_px": {
+    "x": 264,
+    "y": 243,
+    "width": 157,
+    "height": 117,
+    "center_x": 342,
+    "center_y": 301,
+    "area": 16268.5
+  },
+  "gripper_box": [
+    0.389062,
+    0.483333,
+    0.292187,
+    0.289583
+  ],
+  "ready_min_area": 13014.8,
+  "ready_min_height": 93,
+  "center_tolerance_ratio": 0.08,
+  "source": "pick1_manual_red.jpg ideal pick_1 red image under glare",
+  "raw_image": "/home/pi/chay/pick1_manual_red.jpg",
+  "debug_image": "/home/pi/chay/pick1_manual_red_bbox.jpg"
+}
