@@ -1,70 +1,82 @@
-"""Fixed-waypoint navigation for the simple map.
+"""Move the base until the detected object center enters the pick bbox."""
 
-This is a plain Python module first. It can be wrapped as a ROS node later.
-"""
+from dataclasses import dataclass
 
 from config import (
-    DEFAULT_FORWARD_SPEED,
-    DEFAULT_TURN_SPEED,
-    FORWARD_DISTANCE_TOLERANCE_M,
-    MAX_FORWARD_SEGMENT_M,
-    REALIGN_AFTER_SEGMENT,
-    ROUTES,
-    SEGMENT_PAUSE_S,
+    ALIGN_FORWARD_SPEED,
+    ALIGN_MAX_STEPS,
+    ALIGN_STEP_SECONDS,
+    ALIGN_STRAFE_SPEED,
+    FORWARD_SIGN,
+    PICK_TARGET_BBOX,
+    STRAFE_LEFT_SIGN,
 )
-import time
 from robot_driver import RobotDriver
+from vision_color_node import ColorObjectDetector
+
+
+@dataclass
+class AlignResult:
+    done: bool
+    steps: int
+    center: tuple[int, int] | None = None
+    message: str = ""
 
 
 class NavigationNode:
-    def __init__(self, driver=None, routes=None):
+    def __init__(self, driver=None, detector=None):
         self.driver = driver or RobotDriver()
-        self.routes = routes or ROUTES
+        self.detector = detector or ColorObjectDetector()
 
-    def move_between(self, start, goal, speed=DEFAULT_FORWARD_SPEED):
-        key = (start, goal)
-        if key not in self.routes:
-            known = ", ".join(f"{src}->{dst}" for src, dst in self.routes)
-            raise ValueError(f"No route for {start}->{goal}. Known routes: {known}")
+    def align_object_to_bbox(
+        self,
+        camera,
+        target_color,
+        target_bbox=PICK_TARGET_BBOX,
+        max_steps=ALIGN_MAX_STEPS,
+    ):
+        x1, y1, x2, y2 = target_bbox
+        last_center = None
 
-        route = self.routes[key]
-        print(f"[INFO] Route {start} -> {goal}: {route}")
-        self.execute_route(route, speed=speed)
-        print(f"[INFO] Arrived at {goal}")
+        for step in range(1, max_steps + 1):
+            ok, frame = camera.read()
+            if not ok:
+                self.driver.stop()
+                return AlignResult(False, step, last_center, "camera_read_failed")
 
-    def execute_route(self, route, speed=DEFAULT_FORWARD_SPEED):
-        for action, value in route:
-            if action == "forward":
-                progress = self.go_forward_segmented(value, speed=speed)
-                if progress + FORWARD_DISTANCE_TOLERANCE_M < value:
-                    raise RuntimeError(
-                        f"Forward move failed: target={value:.2f}m, "
-                        f"progress={progress:.2f}m"
-                    )
-            elif action == "turn_left":
-                self.driver.turn_by(value, angular_speed=DEFAULT_TURN_SPEED)
-            elif action == "turn_right":
-                self.driver.turn_by(-value, angular_speed=DEFAULT_TURN_SPEED)
+            detection = self.detector.detect(frame, target_color=target_color)
+            if not detection.found:
+                self.driver.stop()
+                return AlignResult(False, step, last_center, detection.message)
+
+            cx, cy = detection.center
+            last_center = detection.center
+            print(f"[ALIGN] step={step} color={detection.color} center={detection.center} bbox={detection.bbox}")
+
+            if x1 <= cx <= x2 and y1 <= cy <= y2:
+                self.driver.stop()
+                return AlignResult(True, step, detection.center, "object_in_pick_bbox")
+
+            if cx < x1:
+                self.driver.move_for(
+                    strafe_left_mps=ALIGN_STRAFE_SPEED * STRAFE_LEFT_SIGN,
+                    seconds=ALIGN_STEP_SECONDS,
+                )
+            elif cx > x2:
+                self.driver.move_for(
+                    strafe_left_mps=-ALIGN_STRAFE_SPEED * STRAFE_LEFT_SIGN,
+                    seconds=ALIGN_STEP_SECONDS,
+                )
+            elif cy < y1:
+                self.driver.move_for(
+                    forward_mps=ALIGN_FORWARD_SPEED * FORWARD_SIGN,
+                    seconds=ALIGN_STEP_SECONDS,
+                )
             else:
-                raise ValueError(f"Unknown navigation action: {action}")
+                self.driver.move_for(
+                    forward_mps=-ALIGN_FORWARD_SPEED * FORWARD_SIGN,
+                    seconds=ALIGN_STEP_SECONDS,
+                )
 
-    def go_forward_segmented(self, distance_m, speed=DEFAULT_FORWARD_SPEED):
-        remaining = distance_m
-        total_progress = 0.0
-        target_yaw = self.driver.get_yaw() if not self.driver.dry_run else 0.0
-        while remaining > FORWARD_DISTANCE_TOLERANCE_M:
-            segment = min(remaining, MAX_FORWARD_SEGMENT_M)
-            progress = self.driver.go_forward(segment, speed=speed)
-            total_progress += progress
-            if progress + FORWARD_DISTANCE_TOLERANCE_M < segment:
-                return total_progress
-            remaining -= progress
-            if REALIGN_AFTER_SEGMENT:
-                self.driver.realign_to_yaw(target_yaw)
-            if remaining > FORWARD_DISTANCE_TOLERANCE_M:
-                time.sleep(SEGMENT_PAUSE_S)
-        return total_progress
-
-    def move_flow(self, waypoints, speed=DEFAULT_FORWARD_SPEED):
-        for start, goal in zip(waypoints, waypoints[1:]):
-            self.move_between(start, goal, speed=speed)
+        self.driver.stop()
+        return AlignResult(False, max_steps, last_center, "alignment_timeout")
